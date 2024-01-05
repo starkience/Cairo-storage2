@@ -5,7 +5,7 @@ Key Changes:
 - **Storage Mechanism:** added a `LegacyMap` to associate numbers with addresses
 - **Address Association:** with `get_caller_address()` 
 - **Function Renaming:** from `set` and `get` to `set_number` and `get_number`
-- **Functionality Update:** Adapted `get_number` so users can retrieve their specific stored number
+- **Functionality Update:** updated `get_number` function so users can retrieve their specific stored number
 
 ## Explanation:
 
