@@ -19,7 +19,7 @@ Key Changes:
 
 #### Storage
 
-- **LegacyMap<ContractAddress, felt252> named numbers**: the contract can now store a separate `felt252` value for each user (address)
+- **LegacyMap<ContractAddress, felt252>**: the contract can now store a separate `felt252` value for each user (address) !
 
 #### Functions (external)
 
