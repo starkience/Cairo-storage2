@@ -7,8 +7,8 @@
 
 #[starknet::interface]
 trait ISimpleStorage<TContractState> {
-    fn set_number(ref self: TContractState, number: felt252);
-    fn get_number(self: @TContractState) -> felt252;
+    fn set_number(ref self: TContractState, number: u64);
+    fn get_number(self: @TContractState) -> u64;
 }
 
 #[starknet::contract]
@@ -18,16 +18,16 @@ mod SimpleStorage {
 
     #[storage]
     struct Storage {
-        numbers: LegacyMap<ContractAddress, felt252>
+        numbers: LegacyMap<ContractAddress, u64>
     }
 
     #[abi(embed_v0)]
     impl SimpleStorage of super::ISimpleStorage<ContractState> {
-        fn set_number(ref self: ContractState, number: felt252) {
+        fn set_number(ref self: ContractState, number: u64) {
             let caller = get_caller_address();
             self.numbers.write(caller, number);
         }
-        fn get_number(self: @ContractState) -> felt252 {
+        fn get_number(self: @ContractState) -> u64 {
             let caller = get_caller_address();
             return self.numbers.read(caller);
         }
