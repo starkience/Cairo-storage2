@@ -4,7 +4,6 @@
 // Changed the name of our storage variable from stored_data to numbers
 // Changed the name of our external functions, from get to get_number and set to set_number
 
-
 #[starknet::interface]
 trait ISimpleStorage<TContractState> {
     fn set_number(ref self: TContractState, number: u64);
