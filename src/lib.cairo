@@ -18,7 +18,7 @@ mod SimpleStorage {
 
     #[storage]
     struct Storage {
-        numbers: LegacyMap<ContractAddress, u64>
+        numbers: LegacyMap::<ContractAddress, u64>
     }
 
     #[abi(embed_v0)]
